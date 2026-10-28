@@ -1,0 +1,17 @@
+const supabase = require('../supabase');
+
+router.get('/test-db', async (req, res) => {
+  const { data, error } = await supabase
+    .from('donors')
+    .select('id')
+    .limit(1);
+
+  if (error) {
+    return res.status(500).json({ error: error.message });
+  }
+
+  res.json({
+    message: 'Supabase database connected successfully!',
+    data
+  });
+});
