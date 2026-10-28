@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#54172a">
+  <title>HemoConnect — Every Connection Can Save a Life</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="HemoConnect home">
+      <span class="brand-mark"><span></span></span>
+      <span>Hemo<span>Connect</span><small>DONOR NETWORK</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a class="nav-link active" href="#home">Home</a>
+      <a class="nav-link" href="#donor">Donor info</a>
+      <a class="nav-link" href="#recipient">Receiver info</a>
+      <a class="nav-link" href="#directory">Directory</a>
+    </nav>
+    <div class="top-actions">
+      <button id="themeToggle" class="theme-toggle" aria-label="Switch color theme" title="Switch theme"><span id="themeIcon">☾</span></button>
+      <a class="button button-small button-outline" href="#account">Sign in <span aria-hidden="true">↗</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> A COMMUNITY THAT CARES <span class="eyebrow-line"></span></div>
+        <h1>One small act.<br><em>A lifetime</em> of hope.</h1>
+        <p class="hero-description">A thoughtful connection between people who can give and people who need. Join a community where every drop has the power to make a difference.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#donor">Become a donor <span>↗</span></a>
+          <a class="text-link" href="#recipient">Request blood <span>→</span></a>
+        </div>
+        <div class="hero-proof">
+          <div class="avatar-stack"><span>H</span><span>+</span><span>♥</span></div>
+          <div><strong>Small action. Real impact.</strong><small>Be there when someone needs you.</small></div>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="hero-card card-float-top"><span class="mini-icon">✦</span><span><strong>Give with purpose</strong><small>Your kindness matters</small></span></div>
+        <div class="drop-stage">
+          <div class="drop-glow"></div>
+          <svg class="main-drop" viewBox="0 0 260 300" role="img" aria-label="Stylized burgundy blood drop"><defs><linearGradient id="dropGrad" x1="0" x2="1" y1="0" y2="1"><stop offset="0%" stop-color="#f09aab"/><stop offset="45%" stop-color="#b93253"/><stop offset="100%" stop-color="#64172f"/></linearGradient><filter id="dropShadow" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="20" stdDeviation="15" flood-color="#54172a" flood-opacity=".28"/></filter></defs><path d="M130 12 C105 58 40 128 40 188 C40 244 80 281 130 281 C180 281 220 244 220 188 C220 128 155 58 130 12Z" fill="url(#dropGrad)" filter="url(#dropShadow)"/><path d="M91 128 C74 151 66 174 70 194" fill="none" stroke="#ffd9df" stroke-width="9" stroke-linecap="round" opacity=".7"/><ellipse cx="89" cy="220" rx="13" ry="6" fill="#ffd9df" opacity=".3"/></svg>
+          <span class="stage-caption">THE GIFT OF LIFE</span>
+        </div>
+        <div class="hero-card card-float-bottom"><span class="pulse-icon">✚</span><span><strong>Every drop counts</strong><small>Be someone's reason to hope</small></span></div>
+        <div class="sparkle sparkle-a">✧</div><div class="sparkle sparkle-b">✦</div><div class="sparkle sparkle-c">·</div>
+      </div>
+    </section>
+
+    <section class="quote-strip section-wrap">
+      <span class="quote-mark">“</span>
+      <p>Sometimes being a hero means simply showing up for someone.</p>
+      <span class="quote-credit">— THE HEMOCONNECT PROMISE</span>
+    </section>
+
+    <section class="section-wrap section-block" id="account">
+      <div class="section-heading">
+        <div><div class="eyebrow">YOUR SPACE, YOUR IMPACT</div><h2>Welcome to your <em>community.</em></h2></div>
+        <p>Sign in to your account or create one to get started. Your information is saved in the HemoConnect database.</p>
+      </div>
+      <div class="account-grid">
+        <div class="panel account-panel">
+          <div class="panel-heading"><div class="icon-tile">↗</div><div><h3>Member access</h3><p>Pick up where you left off.</p></div></div>
+          <div class="tab-switch" role="tablist" aria-label="Account options">
+            <button class="tab-button selected" id="loginTab" type="button">Sign in</button>
+            <button class="tab-button" id="registerTab" type="button">Create account</button>
+          </div>
+          <form id="loginForm" class="form-stack">
+            <label>Email address<input name="email" type="email" placeholder="you@example.com" autocomplete="email" required></label>
+            <label>Password<input name="password" type="password" placeholder="At least 6 characters" autocomplete="current-password" minlength="6" required></label>
+            <button class="button button-primary button-full" type="submit">Sign in securely <span>→</span></button>
+            <p class="form-message" id="loginMessage" aria-live="polite"></p>
+          </form>
+          <form id="registerForm" class="form-stack hidden">
+            <label>Full name<input name="name" type="text" placeholder="Your full name" autocomplete="name" required></label>
+            <label>Email address<input name="email" type="email" placeholder="you@example.com" autocomplete="email" required></label>
+            <label>Create password<input name="password" type="password" placeholder="At least 6 characters" minlength="6" autocomplete="new-password" required></label>
+            <button class="button button-primary button-full" type="submit">Create my account <span>→</span></button>
+            <p class="form-message" id="registerMessage" aria-live="polite"></p>
+          </form>
+          <div class="privacy-note"><span>♧</span> Your password is securely hashed before storage.</div>
+        </div>
+        <div class="welcome-panel">
+          <div class="welcome-orb">✦</div>
+          <div class="eyebrow">MORE THAN A REGISTRATION</div>
+          <h3>Small steps can<br>change <em>someone's world.</em></h3>
+          <p>Create a profile, register as a donor, or submit a blood request. Your records are saved securely in the Supabase PostgreSQL database connected to this app.</p>
+          <div class="welcome-points"><span><b>01</b> Join the community</span><span><b>02</b> Share the right details</span><span><b>03</b> Make connection possible</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-wrap section-block" id="donor">
+      <div class="section-heading">
+        <div><div class="eyebrow">GIVE SOMEONE ANOTHER TOMORROW</div><h2>Become a <em>lifesaver.</em></h2></div>
+        <p>Register your details to help build a community of willing donors. All fields marked with * are required.</p>
+      </div>
+      <div class="form-layout">
+        <div class="section-side-note donor-note"><span class="big-number">01</span><div class="side-symbol">✳</div><h3>Your kindness<br>can go further.</h3><p>One registration can help make a future connection possible. Thank you for considering donation.</p><div class="side-bottom">DONOR REGISTRATION <span>↗</span></div></div>
+        <form id="donorForm" class="panel data-form">
+          <div class="form-title"><span class="form-step">01 / DONOR</span><span class="required-note">* Required fields</span></div>
+          <div class="field-grid">
+            <label class="wide">Full name *<input name="fullName" placeholder="Enter your full name" required maxlength="100"></label>
+            <label>Age *<input name="age" type="number" min="18" max="65" placeholder="18–65" required></label>
+            <label>Blood group *<select name="bloodGroup" required><option value="">Choose group</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option><option>O+</option><option>O-</option></select></label>
+            <label>Phone number *<input name="phone" type="tel" placeholder="Your contact number" required maxlength="25"></label>
+            <label>City / area *<input name="city" placeholder="e.g. Hyderabad" required maxlength="100"></label>
+            <label class="wide">Last donation date <input name="lastDonation" type="date"></label>
+          </div>
+          <div class="form-footer"><p>By submitting, you confirm the details are accurate.</p><button class="button button-primary" type="submit">Save donor details <span>→</span></button></div>
+          <p class="form-message" id="donorMessage" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section-wrap section-block" id="recipient">
+      <div class="section-heading">
+        <div><div class="eyebrow">WHEN SUPPORT MATTERS MOST</div><h2>Request blood with <em>care.</em></h2></div>
+        <p>Submit the receiver's details so the request can be recorded and followed up by your team.</p>
+      </div>
+      <div class="form-layout">
+        <div class="section-side-note receiver-note"><span class="big-number">02</span><div class="side-symbol">✧</div><h3>Hope starts<br>with a connection.</h3><p>Share clear information about the blood group, hospital and urgency of the request.</p><div class="side-bottom">RECEIVER REQUEST <span>↗</span></div></div>
+        <form id="recipientForm" class="panel data-form">
+          <div class="form-title"><span class="form-step">02 / RECEIVER</span><span class="required-note">* Required fields</span></div>
+          <div class="field-grid">
+            <label class="wide">Receiver full name *<input name="fullName" placeholder="Enter receiver's name" required maxlength="100"></label>
+            <label>Age *<input name="age" type="number" min="0" max="120" placeholder="Age in years" required></label>
+            <label>Blood group needed *<select name="bloodGroup" required><option value="">Choose group</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option><option>O+</option><option>O-</option></select></label>
+            <label>Units required *<input name="units" type="number" min="1" max="20" value="1" required></label>
+            <label>Contact number *<input name="phone" type="tel" placeholder="Contact number" required maxlength="25"></label>
+            <label class="wide">Hospital / medical centre *<input name="hospital" placeholder="Name of hospital" required maxlength="150"></label>
+            <label>City *<input name="city" placeholder="City / area" required maxlength="100"></label>
+            <label>Request urgency *<select name="urgency" required><option value="Normal">Normal</option><option value="Urgent">Urgent</option><option value="Critical">Critical</option><option value="Low">Low</option><option value="Medium">Medium</option><option value="High">High</option></select></label>
+          </div>
+          <div class="form-footer"><p>For emergencies, contact local emergency services or a licensed blood bank directly.</p><button class="button button-primary" type="submit">Save blood request <span>→</span></button></div>
+          <p class="form-message" id="recipientMessage" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section-wrap section-block directory-section" id="directory">
+      <div class="section-heading">
+        <div><div class="eyebrow">YOUR COMMUNITY RECORDS</div><h2>Connection <em>directory.</em></h2></div>
+        <p>Review real-time records saved to your Supabase PostgreSQL database.</p>
+      </div>
+      <div class="directory-toolbar">
+        <div class="directory-tabs"><button class="tab-button selected" id="showDonors" type="button">Donors <span id="donorCount">0</span></button><button class="tab-button" id="showRecipients" type="button">Receivers <span id="recipientCount">0</span></button></div>
+        <div class="filters"><select id="filterBlood" aria-label="Filter by blood group"><option value="">All blood groups</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option><option>O+</option><option>O-</option></select><input id="filterCity" placeholder="Search city..." aria-label="Search city"><button class="button button-outline" id="refreshDirectory" type="button">Refresh ↻</button></div>
+      </div>
+      <div class="panel table-panel"><div id="directoryContent" class="directory-content"><div class="empty-state"><span>✧</span><h3>Your directory will appear here</h3><p>Register a donor or receiver to see saved records.</p></div></div></div>
+      <p class="directory-disclaimer">Demo privacy note: records are stored securely in your connected Supabase PostgreSQL database. Do not use for real emergency medical decisions without licensed medical verification.</p>
+    </section>
+
+    <section class="closing-cta section-wrap">
+      <div><div class="eyebrow">A LITTLE KINDNESS GOES A LONG WAY</div><h2>Be the reason hope <em>keeps going.</em></h2><p>Join HemoConnect and help bring the right people closer together.</p></div>
+      <a href="#donor" class="button button-light">Join as a donor <span>↗</span></a>
+      <div class="cta-decoration">✳</div>
+    </section>
+  </main>
+
+  <footer class="footer section-wrap"><a class="brand footer-brand" href="#home"><span class="brand-mark"><span></span></span><span>Hemo<span>Connect</span><small>DONOR NETWORK</small></span></a><p>Designed with care. Built to connect.</p><a href="#home">Back to top ↑</a></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
